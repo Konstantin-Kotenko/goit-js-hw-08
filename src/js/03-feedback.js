@@ -27,5 +27,3 @@ const onSubmitForm = e => {
 
 form.addEventListener('input', throttle(onInputForm, 500));
 form.addEventListener('submit', onSubmitForm);
-
-//safasfasfasfas
