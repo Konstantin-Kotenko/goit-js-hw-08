@@ -11,7 +11,7 @@ const onInputForm = e => {
 };
 
 const onSubmitForm = e => {
-  e.prevantDefault();
+  e.preventDefault();
   console.log(JSON.parse(localStorage.getItem(LOCALSTORAGE)));
   e.currentTarget.reset();
   localStorage.removeItem(LOCALSTORAGE);
@@ -27,6 +27,7 @@ const savedData = () => {
     form.message.value = savedDataText.message;
   }
 };
+
 savedData();
 
 form.addEventListener('input', throttle(onInputForm, 500));
